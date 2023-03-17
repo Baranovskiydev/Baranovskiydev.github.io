@@ -1,8 +1,10 @@
 import { combineReducers, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import QuitUserReducer from './reducers/QuitUserSlice'
 import { presentUserAPI } from "../API/UserPresent";
+import AddInfoReducer from './reducers/AddInfoSlice'
 
 const rootReducer = combineReducers({
+    AddInfoReducer,
     QuitUserReducer,
     [presentUserAPI.reducerPath]: presentUserAPI.reducer
 })

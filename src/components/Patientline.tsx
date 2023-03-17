@@ -6,11 +6,14 @@ interface lineprops{
     fullname: string;
     room?: number;
     cause?: string;
+    handleronclick(): void;
 }
 
 function Patientline(info: lineprops) {
+
+
   return (
-    <div className={styles.line}>
+    <div className={styles.line} onClick={() => info.handleronclick()}>
         <div>{info.id}</div>
         <div>{info.fullname}</div>
         <div>{info.cause} {info.room}</div>

@@ -1,7 +1,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    box-sizing: 0px;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -16,9 +16,14 @@
 .line:hover{
     border-left: solid 2px #3399CC;
     background-color: #F0F0F0;
+    
 }
 
+.line > div {
+    padding: 10px;
+}
 
+/* head and slider */
 .head{
     color: #C0C0C0;
     width: 100%;
@@ -28,8 +33,82 @@
     grid-template-columns: repeat(3, 1fr);
 }
 
+.head > div {
+    padding: 10px;
+}
+
+.slider{
+    overflow: scroll;
+    overflow-x: hidden;
+    max-height: 45vh;
+}
+
+/* Patient list component */
+
 .list{
     box-shadow: 7px 7px 8px 0px rgba(34, 60, 80, 0.27);
     border: solid 1px #C0C0C0;
     background-color: white;
+    min-height: 60vh;
+    width: 40vw;
+    margin: 10px;
+    max-height: 60vh;
 }
+
+.list > form{
+    padding: 15px 15px 15px 0px;
+}
+
+.tabs{
+    appearance: none;
+}
+
+label{
+    padding: 15px;
+}
+
+.tabs:checked + label{
+    border-bottom: 2px solid #3399CC;
+    color: #3399CC;
+    font-weight: 500;
+}
+
+/* WideInfo component */
+.wide{
+    border: solid 2px #3399CC;
+    box-shadow: 7px 7px 8px 0px rgba(34, 60, 80, 0.27);
+    min-height: 60vh;
+    width: 40vw;
+    margin: 10px;
+    background-color: white;
+
+}
+
+.wide > header{
+    color: white;
+    background-color: #3399CC;
+    padding: 10px;
+    font-size: x-large;
+    display: flex;
+    align-items: center;
+}
+
+.wide > p > input{
+    border: none;
+    border-bottom: solid 1px #C0C0C0 ;
+    width: 200px;
+}
+.wide > p > input:disabled{
+    background-color: white;
+    color: black;
+    
+}
+
+.wide > p{
+    padding: 5px;
+}
+
+
+
+
+

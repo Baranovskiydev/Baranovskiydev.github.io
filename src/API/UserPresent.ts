@@ -9,6 +9,11 @@ export const presentUserAPI = createApi({
             query: (limit: number = 20) => ({
                 url: '/41059fc433d9'
             })
+        }),
+        fetchUserByID: build.query<IPresentUser[], number>({
+            query: (id) => ({
+                url:`/41059fc433d9/${id}`
+            })
         })
     })
 })
