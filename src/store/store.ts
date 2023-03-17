@@ -1,16 +1,16 @@
 import { combineReducers, configureStore, getDefaultMiddleware } from "@reduxjs/toolkit";
 import QuitUserReducer from './reducers/QuitUserSlice'
-import { quitUserAPI } from "../API/UserPresent";
+import { presentUserAPI } from "../API/UserPresent";
 
 const rootReducer = combineReducers({
     QuitUserReducer,
-    [quitUserAPI.reducerPath]: quitUserAPI.reducer
+    [presentUserAPI.reducerPath]: presentUserAPI.reducer
 })
 export const setupStore = () => {
     return configureStore({
         reducer: rootReducer,
         middleware: (getDefaultMiddleware) => 
-            getDefaultMiddleware().concat(quitUserAPI.middleware)
+            getDefaultMiddleware().concat(presentUserAPI.middleware)
     })
 }
 
