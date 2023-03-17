@@ -1,13 +1,14 @@
 import React from 'react';
-import './App.css';
 import { useAppDispatch } from './hooks/redux';
+import Patientpresent from './components/Patientpresent';
+import styles from './app.module.css'
 
 function App() {
 
   const dispatch = useAppDispatch();
   return (
-    <div>
-
+    <div className={styles.app}>
+      <Patientpresent/>
     </div>
   );
 }

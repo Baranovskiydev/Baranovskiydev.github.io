@@ -1,6 +1,6 @@
 import axios from "axios";
 import { AppDispatch } from "../store";
-import { IQuitUser } from "../../models/IPresentUser";
+import { IQuitUser } from "../../models/IQuitUser";
 import {QuitUserSlice} from "./QuitUserSlice";
 import {createAsyncThunk} from "@reduxjs/toolkit";
 
@@ -23,7 +23,7 @@ export const fetchQuitUsers = createAsyncThunk(
     'quituser/fetchall',
     async(_, thunkAPI) => {
         try {
-            const response = await axios.get<IQuitUser[]>('');
+            const response = await axios.get<IQuitUser[]>('https://json.extendsclass.com/bin/4591d7dd24f7');
             return response.data;
         } catch (e) {
             return thunkAPI.rejectWithValue("Не удалось загрузить пользователей")           

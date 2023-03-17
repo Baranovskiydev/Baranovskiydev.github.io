@@ -1,4 +1,4 @@
-import { IQuitUser } from "../../models/IPresentUser"
+import { IQuitUser } from "../../models/IQuitUser"
 import {createSlice, PayloadAction} from "@reduxjs/toolkit";
 import { fetchQuitUsers } from "./ActionCreators";
 

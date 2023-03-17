@@ -1,4 +1,4 @@
-export interface IQuitUser {
+export interface IPresentUser {
     historyNumber: number,
     firstName: string,
     lastName: string,

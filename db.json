@@ -1,5 +1,5 @@
 {
-    "QuitedUsers": [
+    "PresentUsers": [
         {
             "historyNumber": 230,
             "firstName": "jtrescgb",
@@ -244,7 +244,7 @@
             "bedNumber": 148
         }
     ],
-    "PresentUsers": [
+    "QuitedUsers": [
         {
             "historyNumber": 278,
             "firstName": "nejhispw",
